@@ -1,0 +1,25 @@
+GET http://localhost:3000/bank-accounts
+
+###
+GET http://localhost:3000/bank-accounts/2a87caeb-f683-4e84-af08-2be548d5f88b
+
+###
+POST http://localhost:3000/bank-accounts
+Content-Type: application/json
+
+{
+    "account_number": "1111-1",
+    "owner_name": "foo bar"
+}
+
+###
+GET http://localhost:3000/bank-accounts/2a87caeb-f683-4e84-af08-2be548d5f88b/pix-keys
+
+### 
+POST http://localhost:3000/bank-accounts/2a87caeb-f683-4e84-af08-2be548d5f88b/pix-keys
+Content-Type: application/json
+
+{
+    "kind":"email",
+    "key":"kind@email.com"
+}
